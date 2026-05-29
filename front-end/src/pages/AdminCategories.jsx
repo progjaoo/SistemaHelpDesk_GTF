@@ -159,18 +159,6 @@ export default function AdminCategories() {
             <span className="label">Descrição</span>
             <input className="input" value={form.description} onChange={(event) => setField('description', event.target.value)} />
           </label>
-          {/* <label className="field">
-            <span className="label">Ordem</span>
-            <input className="input" type="number" value={form.sort_order} onChange={(event) => setField('sort_order', event.target.value)} />
-          </label> */}
-          {/* <label className="field">
-            <span className="label">Cor</span>
-            <input className="input" placeholder="#2563eb" value={form.color} onChange={(event) => setField('color', event.target.value)} />
-          </label>
-          <label className="field lg:col-span-3">
-            <span className="label">Ícone</span>
-            <input className="input" placeholder="Ex.: monitor, radio, printer" value={form.icon} onChange={(event) => setField('icon', event.target.value)} />
-          </label> */}
           <div className="flex items-end lg:col-span-5">
             <button className="btn btn-primary" type="submit" disabled={saving}>
               {editingId ? <Save size={16} aria-hidden="true" /> : <Plus size={16} aria-hidden="true" />}

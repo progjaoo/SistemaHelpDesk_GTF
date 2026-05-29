@@ -32,10 +32,10 @@ textarea {
     @apply mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8;
   }
 
-  .auth-page {
-    @apply flex min-h-screen items-center justify-center px-4 py-10;
-  }
 
+  .auth-page {
+    @apply flex min-h-screen items-center justify-center px-4 py-10 relative bg-cover bg-center bg-no-repeat;
+  }
   .panel {
     @apply rounded-lg border border-line bg-surface shadow-soft;
   }

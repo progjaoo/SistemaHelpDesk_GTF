@@ -4,6 +4,8 @@ import { LockKeyhole, LogIn, Mail } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../context/AuthContext.jsx';
 import { getApiError } from '../services/api.js';
+import backgroundImage from '../images/logogtf-login.png';
+import logoHorizontal from '../images/logohorizontal.png';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -27,14 +29,19 @@ export default function Login() {
   }
 
   return (
-    <main className="auth-page">
-      <section className="panel w-full max-w-md panel-pad">
+    <main 
+      className="auth-page" 
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      <div className="absolute inset-0 bg-slate-900/10 pointer-events-none" />
+
+      <section className="panel w-full max-w-md panel-pad backdrop-blur-sm bg-surface/95 z-10">
         <div className="mb-6">
-          <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-md bg-brand text-sm font-black text-white">
-            GTF
-          </div>
-          <h1 className="section-title">Entrar</h1>
-          <p className="section-subtitle">Help Desk Interno</p>
+          <img 
+            src={logoHorizontal} 
+            alt="Grupo Torre Forte" 
+            className="mb-4 h-auto w-full max-w-[240px] object-contain mx-auto"
+          />
         </div>
 
         {error && <div className="mb-4 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">{error}</div>}
